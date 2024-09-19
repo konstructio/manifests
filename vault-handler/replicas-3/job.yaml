@@ -9,7 +9,7 @@ spec:
       serviceAccountName: vault-handler
       containers:
         - name: vault-handler
-          image: kubefirst/vault-handler
+          image: ghcr.io/konstructio/vault-handler:latest
           imagePullPolicy: Always
           args: ['unseal']
       restartPolicy: OnFailure

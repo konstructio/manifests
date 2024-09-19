@@ -5,11 +5,3 @@ namespace: vault
 resources:
   - job.yaml
   - rbac.yaml
-
-images:
-  - name: kubefirst/vault-handler
-    newName: ghcr.io/konstructio/vault-handler
-    newTag: 'v1.0.0'
-
-generatorOptions:
-  disableNameSuffixHash: true
