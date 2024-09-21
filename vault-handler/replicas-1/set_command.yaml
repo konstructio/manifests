@@ -6,10 +6,6 @@ metadata:
 spec:
   template:
     spec:
-      serviceAccountName: vault-handler
       containers:
         - name: vault-handler
-          image: ghcr.io/konstructio/vault-handler:latest
-          imagePullPolicy: Always
           args: ['unseal', '--leader-only']
-      restartPolicy: OnFailure
