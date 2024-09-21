@@ -3,7 +3,5 @@ kind: Kustomization
 namespace: vault
 
 resources:
-  - ../base
-
-patches:
-  - path: set_command.yaml
+  - job.yaml
+  - rbac.yaml

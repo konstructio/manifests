@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: vault-handler
+  namespace: vault
+spec:
+  template:
+    spec:
+      containers:
+        - name: vault-handler
+          args: ['unseal']
