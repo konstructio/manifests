@@ -30,13 +30,15 @@ data:
           if obj.status.conditions ~= nil then
             local installed = false
             local healthy = false
+            local installed_message = ""
+            local healthy_message = ""
             for i, condition in ipairs(obj.status.conditions) do
               if condition.type == "Ready" then
                 installed = condition.status == "True"
-                installed_message = condition.reason
+                installed_message = condition.reason or ""
               elseif condition.type == "Synced" then
                 healthy = condition.status == "True"
-                healthy_message = condition.reason
+                healthy_message = condition.reason or ""
               end
             end
             if installed and healthy then
